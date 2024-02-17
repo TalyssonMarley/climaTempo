@@ -1,10 +1,10 @@
 const cityInput = document.querySelector("#cityInput");
-const searchBtn = document.querySelector("#search");
+const searchBtn = document.querySelector("#searchBtn");
 
 const cityName = document.querySelector("#cityName");
 const temp = document.querySelector("#temperature span");
-const description = document.querySelector("#description")
-const weather = document.querySelector("#weatherIcon");
+const weatherDescription = document.querySelector("#weatherDescription")
+const weatherIcon = document.querySelector("#weatherIcon");
 const humidity = document.querySelector(".humidity span");
 const wind = document.querySelector(".wind span");
 const flag = document.querySelector('#weatherData img');
@@ -16,13 +16,14 @@ const getWeatherData = async (city) => {
   hideInfo();
 
   const  apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt_br&units=metric&appid=cfceb3fd2346b68d8137fb36162c7367`;
+
   const apiResponse = await fetch(apiWeatherURL);
   const data = await apiResponse.json();
   
   if (apiResponse.status === 200) {
     return data;
   } else {
-    showError();
+    showErrorMensage();
   }
 }
 const showWeaterData = async (city) => {
@@ -32,18 +33,16 @@ const showWeaterData = async (city) => {
 
   cityName.innerText = data.name;
   temp.innerText = parseInt(data.main.temp);
-  description.innerText = data.weather[0].description;
-  weather.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` )
+  weatherDescription.innerText = data.weather[0].description;
+  weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` )
   humidity.innerText = `${data.main.humidity}%`;
   wind.innerText = `${data.wind.speed}km/h`;
   flag.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/32.png`);
 
   weatherDataContainer.style.display = 'block';
-
-  console.log(data);
 };
 
-const showError = () => {
+const showErrorMensage = () => {
   errorMensage.style.display = 'block';
 }
 

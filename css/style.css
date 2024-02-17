@@ -83,7 +83,7 @@ body {
     align-items: center;
 }
 
-#description {
+#weatherDescription {
     font-weight: bold;
     font-size: 20px;
 }
