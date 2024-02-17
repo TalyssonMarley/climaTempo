@@ -24,4 +24,4 @@
 
 ### Link do Projeto
 
-[Acesse o Projeto]([https://tales-calculator.netlify.app/](https://climatempo-tales.netlify.app/)https://climatempo-tales.netlify.app/)
+[Acesse o Projeto](https://climatempo-tales.netlify.app/)
