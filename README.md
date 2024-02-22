@@ -1,9 +1,7 @@
 # 📚 Projeto
   Este Projeto foi feito para o treino de consumo de API sendo elas: [openWeatherApi](https://home.openweathermap.org/users/sign_in) e a [flagsApi](https://flagsapi.com/).
 
-  Após ser informado o nome de uma cidade se inicia o processo de busca das informações na API
-  as informações são convertidas para json, essa informações são armazenadas em uma váriavel chamada de: data. Depois desse processo as informações são atribuidas para cada um elemento html.
-  A bandeira é determinada por uma URL disponivel pela a FlagsAPI e esta URL tem que receber as siglas da cidade, na qual  é fornecida pela a WeatherApi e assim todas as informações são exibidas corretamente. 
+  Projeto desenvolvido com o objetivo de praticar o consumo de API's e a manipulação de elementos HTML, junto com o tratamento de alguns dados fornecidos pela API. 
   
   Os elementos são :
   * Nome da cidade;
